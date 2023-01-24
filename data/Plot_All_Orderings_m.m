@@ -47,7 +47,7 @@
 plot_colors = [ 0 0 0; 0 0 1; 0 1 0; 0 1 1; 1 0 0; 1 0 1; 1 1 0; 1 1 1];
 
 % Create figure
-figure1 = figure('Name','GFLOPS');
+figure1 = figure('Name','GFLOPS','visible','off');
 
 % Create axes, labels, legends.  In future routines for plotting performance, 
 % the next few lines will be hidden in the script.
@@ -118,5 +118,5 @@ legend2 = legend( axes2, 'show' );
 set( legend2, 'Location', 'northwest', 'FontSize', 18) ;
 
 % Uncomment if you want to create a pdf for the graph
-% print( 'Plot_All_Orderings.png', '-dpng' );
+print( 'Plot_All_Orderings.png', '-dpng' );
 %%
