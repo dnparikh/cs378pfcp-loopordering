@@ -8,7 +8,7 @@ In your favorite directory,
 
 You can find the setup instructions also [here](https://www.cs.utexas.edu/users/flame/laff/pfhp/week0-installing-BLIS.html).   
 
-`$ git clone git@github.com:flame/blis.git`  
+`$ git clone https://github.com/flame/blis.git)`  
 
 `$ cd blis`   
 
@@ -17,12 +17,12 @@ You can find the setup instructions also [here](https://www.cs.utexas.edu/users/
 `$ ./configure -t openmp -p ~/blis auto `     
 `$ make -j8`  
 `$ make check -j8`  
-`$ make installi`  
+`$ make install`  
 
 ## Getting this codebase
 `$ cd ..` 
 
-`$ git clone git@github.com:utcs378-pfcp/cs378pfcp-loopordering.git`   
+`$ git clone https://github.com/utcs378-pfcp/cs378pfcp-loopordering.git`   
 
 `$ cd cs378pfcp-loopordering`  
 
