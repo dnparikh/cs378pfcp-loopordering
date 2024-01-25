@@ -34,7 +34,8 @@ int main(int argc, char *argv[])
     ldA, 
     size, first, last, inc,
     i_one=1,
-    AllCorrect;
+    AllCorrect,
+    err;
 
   double
     d_one = 1.0,
@@ -48,7 +49,7 @@ int main(int argc, char *argv[])
      largest to smallest since this seems to give more reliable 
      timings.  */
   printf( "%% enter first, last, inc:" );
-  scanf( "%d%d%d", &first, &last, &inc );
+  err = scanf( "%d%d%d", &first, &last, &inc );
 
   /* Adjust first and last so that they are multiples of inc */
   last = ( last / inc ) * inc;

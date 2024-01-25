@@ -1,5 +1,3 @@
-# HOME      := /Users/rvdg
-
 # Make sure you have BLIS installed in your home directory (or some other BLAS library)
 BLAS_LIB  := $(HOME)/blis/lib/libblis.a
 BLAS_INC  := $(HOME)/blis/include/blis

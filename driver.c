@@ -16,8 +16,6 @@ double MaxAbsDiff( int, int, double *, int, double *, int );
 /* RandomMatrix overwrites a matrix with random values */
 void RandomMatrix( int, int, double *, int );
 
-/* Prototype for BLAS matrix-matrix multiplication routine (which we will 
-   use for the reference implementation */
 void dgemm_( char *, char *,                 // transA, transB
 	     int *, int *, int *,            // m, n, k
 	     double *, double *, int *,      // alpha, A, ldA
@@ -37,7 +35,8 @@ int main(int argc, char *argv[])
     ldA, ldB, ldC,
     size, first, last, inc,
     i, irep,
-    nrepeats;
+    nrepeats, 
+    err;
 
   double
     d_one = 1.0,
@@ -49,7 +48,7 @@ int main(int argc, char *argv[])
 
   /* Every time trial is repeated "repeat" times and the fastest run is recorded */
   printf( "%% number of repeats:" );
-  scanf( "%d", &nrepeats );
+  err = scanf( "%d", &nrepeats );
   printf( "%% %d\n", nrepeats );
 
   /* Timing trials for matrix sizes m=n=k=first to last in increments
@@ -57,7 +56,7 @@ int main(int argc, char *argv[])
      largest to smallest since this seems to give more reliable 
      timings.  */
   printf( "%% enter first, last, inc:" );
-  scanf( "%d%d%d", &first, &last, &inc );
+  err = scanf( "%d%d%d", &first, &last, &inc );
 
   /* Adjust first and last so that they are multiples of inc */
   last = ( last / inc ) * inc;
